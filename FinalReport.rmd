@@ -1,6 +1,6 @@
 ---
 title: "Abacavirinol"
-author: "Beverly Zuniga"
+author: "Beverly Zuniga,Jannette Quezada, Joceline Escamilla"
 date: "November 17, 2018"
 output: html_document
 ---
@@ -19,12 +19,13 @@ justLBGT = filter(abac,LBGT=="yes")
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?.  If you skimp in this section expect to be marked down in your grade. Paint a picture of the project a couple of paragraphs is expected!-->
 
-A new  preventative aides (abacavirinol) is under test in clinical trials. Analyze the effectiveness of this drug across the board. Consider population subgroups by gender, drug use, and sexual orientation. the story has 4927 people in it. The things that were measured are the treatment for the drug, the sex of the person, if they were infected with aids at the end of the study and if they used drugs intravenuously and if they were a part of the LBGT community. When observing at just the girls there are 2638, just guys there are 2289, just LBGT 601, and 701 drug users. 
+A new  preventative aides (abacavirinol) is under test in clinical trials. Analyze the effectiveness of this drug across the board. Consider population subgroups by gender, drug use, and sexual orientation. The story has 4927 people in it. The things that were measured are the treatment for the drug, the sex of the person, if they were infected with aids at the end of the study and if they used drugs intravenuously and if they were a part of the LBGT community. When observing at just the girls there are 2638, just guys there are 2289, just LBGT 601, and 701 drug users. 
 
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
-To make sense out of two catagorical variables it can be done by looking at bar charts, role column percents, and chisquared test. The groups that were observed were girls, guys, drug users, and LBGT community. 
+To make sense out of two catagorical variables it can be done by looking at bar charts, role column percents, and chisquared test. The groups that were observed were girls, guys, drug users, and LBGT community.
+
 #Results for everyone
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -92,7 +93,7 @@ chisqtestGC(results, graph = TRUE)
 
 # Discussion and Conclusion
 
-The chart is showing that the drug appears to be working backwards for girls. Taking the drug is not working as expected. Sixty percent of all of the girls taking the drug aquired aids. The drug is not working as expected. The drug is instead causing aids rather than preventing it. In terms of the P-Value it is showing that the null should be rejected.
+The chart is showing that the drug appears to be working backwards for girls. Taking the drug is not working as expected. Sixty percent of all of the girls taking the drug to prevent aids have actually aquired aids. The drug is instead causing aids rather than preventing it. In terms of the P-Value it is showing that the null should be rejected, with a P-value of 0.062.
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 #Results for just guys
@@ -127,6 +128,8 @@ chisqtestGC(results, graph = TRUE)
 
 # Discussion and Conclusion
 
+According to the bar chart around 30 guys taking the drug have been infected with aids. Whereas over 60 of the guys who took the placebo have been infected. Therefore, the bar chart is showing that taking the drug to prevent aids is an adequate medication for guys. Like wise when looking at the P-value wich equals zero, we can tell that the drug is working positively for the guys.
+
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 #Results for just LBGT
 
@@ -159,6 +162,8 @@ chisqtestGC(results, graph = TRUE)
 
 
 # Discussion and Conclusion
+
+In contrary to the guys, the vaccine for the LBGT community it does not seem to be helping them. Quite oppositely the drug is infecting them with aids. over 60% of the LBGT community takin the vaccine have actually gotten aids rather than preventing getting aids. Members Of the LBGT community who took the placebo 
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 #Results for just drug user
