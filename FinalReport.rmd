@@ -1,6 +1,6 @@
 ---
 title: "Abacavirinol"
-author: "Beverly Zuniga,Jannette Quezada, Joceline Escamilla"
+author: "Beverly Zuniga"
 date: "November 17, 2018"
 output: html_document
 ---
@@ -24,6 +24,7 @@ A new  preventative aides (abacavirinol) is under test in clinical trials. Analy
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
+
 To make sense out of two catagorical variables it can be done by looking at bar charts, role column percents, and chisquared test. The groups that were observed were girls, guys, drug users, and LBGT community.
 
 #Results for everyone
@@ -33,28 +34,31 @@ To make sense out of two catagorical variables it can be done by looking at bar 
 ## Descriptive Results
 
 ### Graphical Descriptive Results
-
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 ```{r}
 results = xtabs(~infected+treatment, data= abac)
 barchartGC(results,type = "percent")
 ```
 
-### Numerical Descriptive Results
+Visual of the chart indicates that only about 40% of everyone taking the drug got aids whereas nearly 60% of everyone taking the placebo got aids. Demonstrating that the medicine seems to working a little bit in causing less aids. 
 
+
+### Numerical Descriptive Results
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 ```{r}
 colPerc(results)
 rowPerc(results)
 ```
 
-## Inferential Results
+the chart breaks down that 40.93 of the people that took the drug got aids and that 59.07 of the people that took the placebo also got aids. Out of the people that did not get aids, 49.10 were taking the drug and 50.90 were taking the placebo. 
 
+## Inferential Results
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 ```{r}
 chisqtestGC(results, graph = TRUE)
 ```
 
+If the drug was not working 16 out of 1000 times these results would occur. Being that there is not enough statistical evidence of the drug not working the hypothesis can be rejected because it does seem to be working. If the drug was not working the chances of getting these result is two percent. Therefore we would reject the null hypothesis, for this drug is working for everyone.
 
 # Discussion and Conclusion
 
@@ -77,12 +81,14 @@ barchartGC(results,type = "percent")
 
 ### Numerical Descriptive Results
 
+In the group that was taking the drug nearly 60% of the girls got aids and about 40% of the girls taking the placebo did so aswell. However, within the group of girls that did not get aids about 50% were taking the drug and a little over 50% of them took the placebo.
+
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 ```{r}
 colPerc(results)
 rowPerc(results)
 ```
-
+In the numerical chart we have visualization of 59.30% of the girls on the drug ending up with aids, along with 40.70% on the girls on the placebo. On the other hand the girls who did not get aids while on the drug was 48.47%, stimultaneously 51.53% were on the placebo.
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
@@ -90,10 +96,11 @@ rowPerc(results)
 chisqtestGC(results, graph = TRUE)
 ```
 
+the Chi-Squared statistics show a P-Value that equals nearly 70% of infected girls by taking the medication.
 
 # Discussion and Conclusion
 
-The chart is showing that the drug appears to be working backwards for girls. Taking the drug is not working as expected. Sixty percent of all of the girls taking the drug to prevent aids have actually aquired aids. The drug is instead causing aids rather than preventing it. In terms of the P-Value it is showing that the null should be rejected, with a P-value of 0.062.
+The chart is showing that the drug appears to be working backwards for girls. Taking the drug is not working as expected. Seventy percent of all of the girls taking the drug to prevent aids have actually aquired aids. The drug is instead causing aids rather than preventing it. In terms of the P-Value it is showing that the null should be rejected, with a P-value of 0.062.
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 #Results for just guys
@@ -110,6 +117,8 @@ results = xtabs(~infected+treatment,data=justguys)
 barchartGC(results,type = "percent")
 ```
 
+Looking at the bar chart it is diplaying that taking the drug significantly helped guys prevent aids, with only about 30% getting aids. Alternatively, over sixty percent of the guys on the placebo were more highly affected. While approximately fifty or so percent of the guys on the dug and placebo were not infected.
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -117,6 +126,8 @@ barchartGC(results,type = "percent")
 colPerc(results)
 rowPerc(results)
 ```
+
+Analyzing the numerical chart it reads that only 30.46% of the guys on the drug actually got aids, likewise for the guys on the placebo with 69.54%. At the same time 49.86% of the guys on the drug and 50.14% of the guys on the placebo did not get aids.
 
 ## Inferential Results
 
@@ -163,7 +174,7 @@ chisqtestGC(results, graph = TRUE)
 
 # Discussion and Conclusion
 
-In contrary to the guys, the vaccine for the LBGT community it does not seem to be helping them. Quite oppositely the drug is infecting them with aids. over 60% of the LBGT community takin the vaccine have actually gotten aids rather than preventing getting aids. Members Of the LBGT community who took the placebo 
+In contrary to the guys, the vaccine for the LBGT community it does not seem to be working as expected. Quite oppositely the drug is infecting them with aids. Over 60% of the LBGT community taking the vaccine have actually gotten aids rather than preventing aids. Only around 30% of the members Of the LBGT community who took the placebo got aids. The P-Value shows a P-Value higher than .05 equalling 0.0743 indicating that the vaccine is not functioning accordingly.  
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 #Results for just drug user
